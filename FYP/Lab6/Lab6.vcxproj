@@ -1,0 +1,171 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{B544D2C1-2E13-4E83-8FEE-662FB98CCD6D}</ProjectGuid>
+    <RootNamespace>Lab6</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LibraryPath>C:\Users\C00165070\Desktop\Lab6\Lab6\Lab6;C:\SDL2_hybrid\lib\x86;$(VC_LibraryPath_x86);$(WindowsSDK_LibraryPath_x86);</LibraryPath>
+    <IncludePath>C:\SDL2_hybrid\include;$(VC_IncludePath);$(WindowsSDK_IncludePath);</IncludePath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <AdditionalIncludeDirectories>./</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>CURL_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>./lib</AdditionalLibraryDirectories>
+      <AdditionalDependencies>Box2D.lib;SDL2main.lib;SDL2_image.lib;SDL2_mixer.lib;SDL2.lib;SDL2_ttf.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;libcurl.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <SubSystem>Console</SubSystem>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="Ammo.cpp" />
+    <ClCompile Include="Bullet.cpp" />
+    <ClCompile Include="Button.cpp" />
+    <ClCompile Include="ElectricBarrier.cpp" />
+    <ClCompile Include="ElectricSwitch.cpp" />
+    <ClCompile Include="EnemyManager.cpp" />
+    <ClCompile Include="EnterNameScreen.cpp" />
+    <ClCompile Include="GameOver.cpp" />
+    <ClCompile Include="GameWon.cpp" />
+    <ClCompile Include="Grunt.cpp" />
+    <ClCompile Include="GruntBullet.cpp" />
+    <ClCompile Include="Health.cpp" />
+    <ClCompile Include="HealthBar.cpp" />
+    <ClCompile Include="HighScoreScreen.cpp" />
+    <ClCompile Include="InGameMenu.cpp" />
+    <ClCompile Include="KeyBoardInput.cpp" />
+    <ClCompile Include="Level.cpp" />
+    <ClCompile Include="MachineGun.cpp" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="Menu.cpp" />
+    <ClCompile Include="Mine.cpp" />
+    <ClCompile Include="MovingPlatform.cpp" />
+    <ClCompile Include="NoRayPlatform.cpp" />
+    <ClCompile Include="ObstacleManager.cpp" />
+    <ClCompile Include="Options.cpp" />
+    <ClCompile Include="PickupManager.cpp" />
+    <ClCompile Include="Platform.cpp" />
+    <ClCompile Include="PlatformManager.cpp" />
+    <ClCompile Include="Play.cpp" />
+    <ClCompile Include="Player.cpp" />
+    <ClCompile Include="Raycast.cpp" />
+    <ClCompile Include="Renderer.cpp" />
+    <ClCompile Include="Robot.cpp" />
+    <ClCompile Include="RobotBullet.cpp" />
+    <ClCompile Include="Score.cpp" />
+    <ClCompile Include="SoundManager.cpp" />
+    <ClCompile Include="Splash.cpp" />
+    <ClCompile Include="Sprite.cpp" />
+    <ClCompile Include="stdafx.cpp" />
+    <ClCompile Include="Teleporter.cpp" />
+    <ClCompile Include="Text.cpp" />
+    <ClCompile Include="Timer.cpp" />
+    <ClCompile Include="Tutorial.cpp" />
+    <ClCompile Include="Wall.cpp" />
+    <ClCompile Include="WallManager.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Ammo.h" />
+    <ClInclude Include="Bullet.h" />
+    <ClInclude Include="Button.h" />
+    <ClInclude Include="ElectricBarrier.h" />
+    <ClInclude Include="ElectricSwitch.h" />
+    <ClInclude Include="EnemyManager.h" />
+    <ClInclude Include="EnterNameScreen.h" />
+    <ClInclude Include="GameOver.h" />
+    <ClInclude Include="GameWon.h" />
+    <ClInclude Include="Grunt.h" />
+    <ClInclude Include="GruntBullet.h" />
+    <ClInclude Include="Health.h" />
+    <ClInclude Include="HealthBar.h" />
+    <ClInclude Include="HighScoreScreen.h" />
+    <ClInclude Include="InGameMenu.h" />
+    <ClInclude Include="KeyBoardInput.h" />
+    <ClInclude Include="Level.h" />
+    <ClInclude Include="MachineGun.h" />
+    <ClInclude Include="Menu.h" />
+    <ClInclude Include="Mine.h" />
+    <ClInclude Include="MovingPlatform.h" />
+    <ClInclude Include="NoRayPlatform.h" />
+    <ClInclude Include="ObstacleManager.h" />
+    <ClInclude Include="Options.h" />
+    <ClInclude Include="PickupManager.h" />
+    <ClInclude Include="Platform.h" />
+    <ClInclude Include="PlatformManager.h" />
+    <ClInclude Include="Play.h" />
+    <ClInclude Include="Player.h" />
+    <ClInclude Include="Raycast.h" />
+    <ClInclude Include="Renderer.h" />
+    <ClInclude Include="Robot.h" />
+    <ClInclude Include="RobotBullet.h" />
+    <ClInclude Include="Score.h" />
+    <ClInclude Include="SoundManager.h" />
+    <ClInclude Include="Splash.h" />
+    <ClInclude Include="Sprite.h" />
+    <ClInclude Include="stdafx.h" />
+    <ClInclude Include="targetver.h" />
+    <ClInclude Include="Teleporter.h" />
+    <ClInclude Include="Text.h" />
+    <ClInclude Include="Timer.h" />
+    <ClInclude Include="Tutorial.h" />
+    <ClInclude Include="Wall.h" />
+    <ClInclude Include="WallManager.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
